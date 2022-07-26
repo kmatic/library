@@ -11,13 +11,18 @@
 <body>
     <div class='sidebar'>
         <h1>Library</h1>
-        <form>
+        <form onsubmit= 'return false'>
+            <h3>Add your book below!</h3>
             <input type='text' id='title' placeholder='Title' required>
             <input type='text' id='author' placeholder='Author' required>
-            <input type='number' id='pages' placeholder='# of Pages' min='1' max='8768' required>
-            <label for='read'>Read?</label>
-            <input type='checkbox' id='read'>
-            <button type='button' class='btn' id='submit'>Add Book</button>
+            <input type='number' id='pages' placeholder='Pages' min='1' max='8768' required>
+            <div>
+                <select id='read'>
+                    <option value='NOT READ'>Not read</option>
+                    <option value='READ'>Read</option>
+                </select>
+            </div>
+            <button type='submit' class='btn' id='submit'>Submit</button>
         </form>
     </div>
     <div class='main'></div>

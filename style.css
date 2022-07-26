@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+:root {
+    --border-val: 2px solid #dfe0eb;
+    --b-radius: 5px;
+    --padding-val : 25px;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    font-family: 'Mulish', sans-serif;
+}
+
+.sidebar {
+    grid-column: 1;
+    background-color: #363740;
+    color: #a4a6b3;
+    padding: var(--padding-val);
+}
+
+.main {
+    grid-column: 2;
+    background-color: #F7F8FC;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: var(--padding-val);
+    gap: var(--padding-val);
+}
+
+.book-card {
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    border: var(--border-val);
+    border-radius: var(--b-radius);
+    padding: var(--padding-val);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+h1 {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type='text'], input[type='number'], button[id='submit'], select {
+    height: 30px;
+    font-size: 16px;
+}
+
+input::placeholder {
+    font-size: 16px;
+}
+
+button[id='submit'] {
+    border: 0px;
+    width: 100px;
+    border-radius: 3px;
+}
+
+p {
+    margin: 0;
+}
