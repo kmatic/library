@@ -15,6 +15,7 @@ function addBookToLibrary() {
 
     const newBook = new Book(title, author, pages, status);
     myLibrary.push(newBook);
+    displayBook();
 }
 
 function displayBook() {
@@ -22,5 +23,3 @@ function displayBook() {
         console.log(myLibrary);
     }
 }
-
-displayBook();
