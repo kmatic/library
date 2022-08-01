@@ -3,12 +3,14 @@ let myLibrary = [];
 const addBtn = document.querySelector('.btn');
 const cardContainer = document.querySelector('.main')
 
-function Book(title, author, pages, status) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
-    this.toggleStatus = function() {
+class Book {
+    constructor(title, author, pages, status) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
+    }
+    toggleStatus() {
         if (this.status === 'NOT READ') {
             this.status = 'READ';
         } else {
